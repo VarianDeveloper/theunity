@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "theUnity", "theUnity\theUnity.csproj", "{FAEA57D6-1AB6-42D3-9D13-B5E78C6CC6F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{06FF96E8-B706-4726-9331-8150CF381C67}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\DependencyInjectionWithUnity.pdf = Documentation\DependencyInjectionWithUnity.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E709CD40-E417-44B8-B274-3016EA027567}"
+	ProjectSection(SolutionItems) = preProject
+		theUnity.pssln = theUnity.pssln
 	EndProjectSection
 EndProject
 Global

@@ -1,5 +1,5 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
 using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace theUnity
@@ -8,14 +8,13 @@ namespace theUnity
     {
         static void Main(string[] args)
         {
-            IUnityContainer container = new UnityContainer();
-            //TODO: replace by design time config
-            RegisterUnity(container);
+            var container = new UnityContainer().LoadConfiguration();
             var methodsLib = container.Resolve<IMethodsLib>();
 
             methodsLib.Method1("param");
         }
 
+        //implemented in app.config
         private static void RegisterUnity(IUnityContainer container)
         {
             container.AddNewExtension<Interception>();
@@ -25,7 +24,5 @@ namespace theUnity
                 new InterceptionBehavior<PolicyInjectionBehavior>()
                 );
         }
-
-
     }
 }
