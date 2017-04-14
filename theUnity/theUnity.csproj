@@ -70,7 +70,6 @@
     <Compile Include="LoggingAttribute.cs" />
     <Compile Include="LoggingInterseptionBehavior.cs" />
     <Compile Include="MethodsLib.cs" />
-    <Compile Include="MethodsLib2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
