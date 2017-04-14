@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace theUnity
+﻿namespace theUnity
 {
     public interface IMethodsLib
     {
-        string Method1();
+        [Logging]
+        string Method1(string param);
+
+        [Logging]
         void Method2();
     }
 
     public class MethodsLib : IMethodsLib
     {
-        public string Method1()
+        public string Method1(string param)
         {
             Method2();
-            return "Method1 finished";
+            return "I'm done!";
         }
 
+        //TODO: how to apply same logger to this method?
         public void Method2()
         {
 
