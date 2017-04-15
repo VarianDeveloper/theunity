@@ -1,4 +1,6 @@
-﻿namespace theUnity
+﻿using System.Threading;
+
+namespace theUnity
 {
     public interface IGeneralMethods { }
 
@@ -13,16 +15,16 @@
 
     public class MethodsLib : IMethodsLib, IGeneralMethods
     {
-        public string Method1(string param)
+        public virtual string Method1(string param)
         {
             Method2();
+            Thread.Sleep(100);
             return "I'm done!";
         }
-
-        //TODO: how to apply same logger to this method?
-        public void Method2()
+        
+        public virtual void Method2()
         {
-
+            Thread.Sleep(1000);
         }
     }
 }

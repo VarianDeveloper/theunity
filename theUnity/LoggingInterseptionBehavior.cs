@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace theUnity
@@ -21,7 +22,11 @@ namespace theUnity
                             $"Start: Invoking method: {input.MethodBase} with parameters \"{args}\" " +
                             $"at {DateTime.Now.ToLongTimeString()}");
 
+            var sw = Stopwatch.StartNew();
+
             var result = getNext()(input, getNext);
+            
+            Console.WriteLine($"Elapsed runtime for procedure {input.MethodBase} is {sw.ElapsedMilliseconds} ms");
 
             Console.WriteLine(
                 $"Method {input.MethodBase} returned \"{result.ReturnValue}\" " +
