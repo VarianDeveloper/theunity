@@ -4,15 +4,15 @@ namespace theUnity
 {
     public interface IGeneralMethods { }
 
+    [Logging]
     public interface IMethodsLib
     {
-        [Logging]
         string Method1(string param);
 
-        [Logging]
         void Method2();
     }
 
+   
     public class MethodsLib : IMethodsLib, IGeneralMethods
     {
         public virtual string Method1(string param)

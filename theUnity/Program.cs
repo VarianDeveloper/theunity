@@ -4,13 +4,13 @@ using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace theUnity
 {
+  
     class Program
     {
         static void Main(string[] args)
         {
             var container = new UnityContainer().LoadConfiguration();
             var methodsLib = container.Resolve<IMethodsLib>();
-
             methodsLib.Method1("param");
         }
 
