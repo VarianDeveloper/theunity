@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		theUnity.pssln = theUnity.pssln
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{DB2D6C41-4912-4FDA-9D7B-7A1C30B1A5E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Tests", "Logger.Tests\Logger.Tests.csproj", "{16ABE1D3-D66E-439F-95A2-5A808F0568DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{FAEA57D6-1AB6-42D3-9D13-B5E78C6CC6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAEA57D6-1AB6-42D3-9D13-B5E78C6CC6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAEA57D6-1AB6-42D3-9D13-B5E78C6CC6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB2D6C41-4912-4FDA-9D7B-7A1C30B1A5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2D6C41-4912-4FDA-9D7B-7A1C30B1A5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2D6C41-4912-4FDA-9D7B-7A1C30B1A5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2D6C41-4912-4FDA-9D7B-7A1C30B1A5E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16ABE1D3-D66E-439F-95A2-5A808F0568DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16ABE1D3-D66E-439F-95A2-5A808F0568DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16ABE1D3-D66E-439F-95A2-5A808F0568DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16ABE1D3-D66E-439F-95A2-5A808F0568DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

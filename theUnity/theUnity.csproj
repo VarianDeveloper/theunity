@@ -67,8 +67,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoggingAttribute.cs" />
-    <Compile Include="LoggingInterseptionBehavior.cs" />
+    <Compile Include="PerformanceLoggingAttribute.cs" />
+    <Compile Include="PerformanceLoggingCallHandler.cs" />
     <Compile Include="MethodsLib.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +77,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="theUnity.psproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{db2d6c41-4912-4fda-9d7b-7a1c30b1a5e9}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

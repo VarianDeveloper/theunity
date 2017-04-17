@@ -5,7 +5,7 @@ using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace theUnity
 {
-    class LoggingCallHandler : ICallHandler //IInterceptionBehavior
+    class PerformanceLoggingCallHandler : ICallHandler //IInterceptionBehavior
     {
         public IEnumerable<Type> GetRequiredInterfaces()
         {
@@ -17,8 +17,9 @@ namespace theUnity
         public IMethodReturn Invoke(IMethodInvocation input, GetNextHandlerDelegate getNext)
         {
             var args = input.Arguments.Count == 0 ? null : input.Arguments[0];
+            var logger = new Logger.Logger();
 
-            Console.WriteLine(
+            logger.LogSimple(
                             $"Start: Invoking method: {input.MethodBase} with parameters \"{args}\" " +
                             $"at {DateTime.Now.ToLongTimeString()}");
 
@@ -26,9 +27,9 @@ namespace theUnity
 
             var result = getNext()(input, getNext);
             
-            Console.WriteLine($"Elapsed runtime for procedure {input.MethodBase} is {sw.ElapsedMilliseconds} ms");
+            logger.LogSimple($"Elapsed runtime for procedure {input.MethodBase} is {sw.ElapsedMilliseconds} ms");
 
-            Console.WriteLine(
+            logger.LogSimple(
                 $"Method {input.MethodBase} returned \"{result.ReturnValue}\" " +
                               $"at {DateTime.Now.ToLongTimeString()}");
 

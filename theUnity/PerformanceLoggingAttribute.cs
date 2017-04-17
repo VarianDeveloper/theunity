@@ -8,18 +8,18 @@ using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace theUnity
 {
-    public class LoggingAttribute : HandlerAttribute
+    public class PerformanceLoggingAttribute : HandlerAttribute
     {
         private readonly int order;
 
-        public LoggingAttribute()
+        public PerformanceLoggingAttribute()
         {
             this.order = 1;
         }
 
         public override ICallHandler CreateHandler(IUnityContainer container)
         {
-            return new LoggingCallHandler() {Order = order};
+            return new PerformanceLoggingCallHandler() {Order = order};
         }
     }
 }

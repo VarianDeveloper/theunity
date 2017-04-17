@@ -4,7 +4,7 @@ namespace theUnity
 {
     public interface IGeneralMethods { }
 
-    [Logging]
+    [PerformanceLogging]
     public interface IMethodsLib
     {
         string Method1(string param);
