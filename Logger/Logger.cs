@@ -10,11 +10,13 @@ namespace Logger
 {
     public class Logger
     {
-        private ILog _logger;
+        private ILog _logger; //, _xmlLogger;
+        
 
         public Logger()
         {
             _logger = LogManager.GetLogger(typeof(Logger));
+            //_xmlLogger = LogManager.GetLogger()
         }
 
         public void LogSimple(string msg)
